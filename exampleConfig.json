@@ -1,0 +1,41 @@
+{
+  "sourceBroker": {
+    "url": "brokerUrl",
+    "options": {
+      "port": 1883,
+      "username": "brokerUserName",
+      "password": "brokerPass",
+      "protocolVersion": 4
+    }
+  },
+    "targetBroker": {
+    "url": "brokerUrl",
+    "options": {
+      "port": 3033,
+      "username": "brokerUserName",
+      "password": "brokerPass",
+      "protocolVersion": 4
+    }
+  },
+  "mqttTargetGreatingInfos":
+  {
+    "topic": "mqttClientGoingToPublish",
+    "mqttEchoInstanceId": "nameOftheEchoInstance"
+  },
+  "topicsToRepublish": [
+    {
+      "targetTopic": "aTargetTopic",
+      "sourceTopic": "aSourceTopic",
+      "keysToRepublish": [
+        {
+          "targetKey": "targetKey1",
+          "sourceKey" : "sourceKey1"
+        },
+        {
+          "targetKey": "targetKey2",
+          "sourceKey" : "sourceKey2"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "mqtt-aws-forwarder",
+  "version": "1.0.0",
+  "description": "MQTT utlity republish topic using differentBroker",
+  "main": "mqttForwarder.js",
+  "dependencies": {
+    "argparse": "^1.0.10",
+    "fs": "0.0.1-security",
+    "moment-timezone": "^0.5.17",
+    "mqtt": "^2.15.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon mqttForwarder.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bakterian/mqtt-aws-forwarder.git"
+  },
+  "keywords": [
+    "mqtt",
+    "forwader",
+    "mqtt-aws"
+  ],
+  "author": "Marcin bakterian@protonmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bakterian/mqtt-aws-forwarder/issues"
+  },
+  "homepage": "https://github.com/bakterian/mqtt-aws-forwarder#readme"
+}
