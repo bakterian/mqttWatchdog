@@ -1,32 +1,34 @@
 {
-  "name": "mqtt-aws-forwarder",
+  "name": "mqtt-watchdog",
   "version": "1.0.0",
-  "description": "MQTT utlity republish topic using differentBroker",
-  "main": "mqttForwarder.js",
+  "description": "MQTT utlity to send out notification when topic is siletn for too long",
+  "main": "mqttWAtchdog.js",
   "dependencies": {
     "argparse": "^1.0.10",
     "fs": "0.0.1-security",
-    "moment-timezone": "^0.5.17",
-    "mqtt": "^2.15.1"
+    "mqtt": "^2.15.1",
+    "moment-timezone": "^0.5.17"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon mqttForwarder.js"
+    "test": "nodemon mqttWatchdog.js -c ../CONFIG/mqttWatchdog/config.json",
+    "start": "node mqttWatchdog.js -c ../CONFIG/mqttWatchdog/config.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bakterian/mqtt-aws-forwarder.git"
+    "url": "git+https://github.com/bakterian/mqttWatchdog.git"
   },
   "keywords": [
     "mqtt",
-    "forwader",
-    "mqtt-aws"
+    "republish",
+    "mqtt-echo"
   ],
   "author": "Marcin bakterian@protonmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bakterian/mqtt-aws-forwarder/issues"
+    "url": "https://github.com/bakterian/mqttWatchdog/issues"
   },
-  "homepage": "https://github.com/bakterian/mqtt-aws-forwarder#readme"
+  "homepage": "https://github.com/bakterian/mqttWatchdog#readme"
 }
